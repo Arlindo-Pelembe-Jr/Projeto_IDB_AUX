@@ -63,5 +63,10 @@ namespace Projeto_IDB_AUX
         {
             Application.Run(new Cliente());
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

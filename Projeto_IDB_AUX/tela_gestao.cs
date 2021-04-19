@@ -99,25 +99,25 @@ namespace Mercearia_PCSHARP_MZ
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //if(e.ColumnIndex == 0)
+            //{
+            //    //Adicionar
+            //    return; 
+            //}
             if(e.ColumnIndex == 0)
-            {
-                //Adicionar
-                return; 
-            }
-            if(e.ColumnIndex == 1)
             {
                 //Editar
                 tela1.Cleary();
-                tela1.id = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                tela1.nome = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                tela1.preco = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                tela1.id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tela1.nome = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                tela1.preco = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 tela1.editar();
                 tela1.ShowDialog();
                 Display();
 
                 return;
             }
-            if(e.ColumnIndex == 2)
+            if(e.ColumnIndex == 1)
             {
                 MessageBox.Show("Dado" + dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
 

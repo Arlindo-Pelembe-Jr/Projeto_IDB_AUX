@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_produtos = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_fornecedor = new System.Windows.Forms.Button();
+            this.btn_produtos = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -47,20 +47,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 480);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btn_produtos
+            // panel4
             // 
-            this.btn_produtos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_produtos.Location = new System.Drawing.Point(-16, 24);
-            this.btn_produtos.Margin = new System.Windows.Forms.Padding(15, 24, 15, 24);
-            this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(548, 86);
-            this.btn_produtos.TabIndex = 7;
-            this.btn_produtos.Text = "Produtos";
-            this.btn_produtos.UseVisualStyleBackColor = true;
-            this.btn_produtos.Click += new System.EventHandler(this.btn_produtos_Click);
+            this.panel4.Controls.Add(this.btn_fornecedor);
+            this.panel4.Controls.Add(this.btn_produtos);
+            this.panel4.Controls.Add(this.btn_cliente);
+            this.panel4.Location = new System.Drawing.Point(166, 53);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(511, 374);
+            this.panel4.TabIndex = 8;
             // 
             // btn_fornecedor
             // 
@@ -75,6 +72,20 @@
             this.btn_fornecedor.Text = "Fornecedor";
             this.btn_fornecedor.UseVisualStyleBackColor = true;
             this.btn_fornecedor.Click += new System.EventHandler(this.btn_fornecedor_Click);
+            // 
+            // btn_produtos
+            // 
+            this.btn_produtos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_produtos.Location = new System.Drawing.Point(-16, 24);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(15, 24, 15, 24);
+            this.btn_produtos.Name = "btn_produtos";
+            this.btn_produtos.Size = new System.Drawing.Size(548, 86);
+            this.btn_produtos.TabIndex = 7;
+            this.btn_produtos.Text = "Produtos";
+            this.btn_produtos.UseVisualStyleBackColor = true;
+            this.btn_produtos.Click += new System.EventHandler(this.btn_produtos_Click);
             // 
             // btn_cliente
             // 
@@ -105,16 +116,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(816, 47);
             this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btn_fornecedor);
-            this.panel4.Controls.Add(this.btn_produtos);
-            this.panel4.Controls.Add(this.btn_cliente);
-            this.panel4.Location = new System.Drawing.Point(166, 53);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(511, 374);
-            this.panel4.TabIndex = 8;
             // 
             // operacoes
             // 
