@@ -126,7 +126,7 @@ namespace Mercearia_PCSHARP_MZ
                 {
                     //int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                     //MessageBox.Show("Dado"+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-                    SGBD_Produto.Deletar(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                    SGBD_Produto.Deletar(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
                 }
                 return;
