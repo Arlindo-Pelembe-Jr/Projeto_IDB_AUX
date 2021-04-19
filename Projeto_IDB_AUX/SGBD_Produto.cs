@@ -111,12 +111,12 @@ namespace Mercearia_PCSHARP_MZ
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Fornecedor Adicionado");
+                MessageBox.Show("Cliente Adicionado");
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Fornecedor nao inserido" + ex.Message);
+                MessageBox.Show("Cliente nao inserido" + ex.Message);
             }
             con.Close();
         }
@@ -248,11 +248,13 @@ namespace Mercearia_PCSHARP_MZ
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = id;
+
             cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = fornecedor.Nome;
             cmd.Parameters.Add("@Bairro", MySqlDbType.VarChar).Value = fornecedor.Bairro;
             cmd.Parameters.Add("@Avenida", MySqlDbType.VarChar).Value = fornecedor.Avenida;
             cmd.Parameters.Add("@Telefone", MySqlDbType.VarChar).Value = fornecedor.Telefone;
-            cmd.Parameters.Add("@Email", MySqlDbType.Double).Value = fornecedor.Email;
+            cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = fornecedor.Email;
 
             try
             {
@@ -272,21 +274,22 @@ namespace Mercearia_PCSHARP_MZ
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = id;
             cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = fornecedor.Nome;
             cmd.Parameters.Add("@Bairro", MySqlDbType.VarChar).Value = fornecedor.Bairro;
             cmd.Parameters.Add("@Avenida", MySqlDbType.VarChar).Value = fornecedor.Avenida;
             cmd.Parameters.Add("@Telefone", MySqlDbType.VarChar).Value = fornecedor.Telefone;
-            cmd.Parameters.Add("@Email", MySqlDbType.Double).Value = fornecedor.Email;
+            cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = fornecedor.Email;
 
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Fornecedor Actualizado");
+                MessageBox.Show("Cliente Actualizado");
 
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Fornecedor nao actualizado" + ex.Message);
+                MessageBox.Show("Cliente nao actualizado" + ex.Message);
             }
             con.Close();
         }
