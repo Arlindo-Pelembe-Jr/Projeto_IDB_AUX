@@ -83,6 +83,19 @@
       <DependentUpon>Fornecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Fornecedor_Model.cs" />
+    <Compile Include="Fornecimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecimento.Designer.cs">
+      <DependentUpon>Fornecimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecimento_Model.cs" />
+    <Compile Include="Fornecimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecimentos.Designer.cs">
+      <DependentUpon>Fornecimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente.cs" />
     <Compile Include="home_page.cs">
       <SubType>Form</SubType>
@@ -96,6 +109,13 @@
     <Compile Include="operacoes.Designer.cs">
       <DependentUpon>operacoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedido_e_Requisicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido_e_Requisicao.Designer.cs">
+      <DependentUpon>Pedido_e_Requisicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedido_model.cs" />
     <Compile Include="Produto_Labels.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +166,20 @@
     <EmbeddedResource Include="Fornecedores.resx">
       <DependentUpon>Fornecedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fornecimento.resx">
+      <DependentUpon>Fornecimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fornecimentos.resx">
+      <DependentUpon>Fornecimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home_page.resx">
       <DependentUpon>home_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="operacoes.resx">
       <DependentUpon>operacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido_e_Requisicao.resx">
+      <DependentUpon>Pedido_e_Requisicao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Produto_Labels.resx">
       <DependentUpon>Produto_Labels.cs</DependentUpon>

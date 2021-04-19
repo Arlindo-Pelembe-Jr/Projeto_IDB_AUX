@@ -76,6 +76,11 @@ namespace Mercearia_PCSHARP_MZ
             Cleary();
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
 

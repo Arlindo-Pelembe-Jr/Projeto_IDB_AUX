@@ -28,7 +28,7 @@ namespace Mercearia_PCSHARP_MZ
 
         public void Display()
         {
-            SGBD_Produto.mostrarEProcurar("select produto_cod,prod_nome, prod_preco_unitario from produto;", dataGridView1);
+            SGBD_Produto.mostrarEProcurar("select produto_cod,prod_nome, prod_preco_unitario,nome_cat from produto;", dataGridView1);
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -37,7 +37,7 @@ namespace Mercearia_PCSHARP_MZ
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SGBD_Produto.mostrarEProcurar("select produto_cod,prod_nome, prod_preco_unitario from produto where prod_nome like '%" + txt_search.Text + "%'", dataGridView1);
+            SGBD_Produto.mostrarEProcurar("select produto_cod,prod_nome, prod_preco_unitario,nome_cat from produto where prod_nome like '%" + txt_search.Text + "%'", dataGridView1);
 
         }
 

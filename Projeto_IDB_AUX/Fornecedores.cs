@@ -65,6 +65,8 @@ namespace Projeto_IDB_AUX
             if (e.ColumnIndex == 0)
             {
                 //Adicionar
+                Fornecimento requisicao = new Fornecimento(dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+                requisicao.ShowDialog();
                 return;
             }
             if (e.ColumnIndex == 1)
@@ -103,6 +105,12 @@ namespace Projeto_IDB_AUX
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_ped_req_Click(object sender, EventArgs e)
+        {
+            Fornecimentos fornecimentos = new Fornecimentos();
+            fornecimentos.ShowDialog();
         }
     }
 }

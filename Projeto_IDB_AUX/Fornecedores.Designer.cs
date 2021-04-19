@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_novo_forn = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.db_frescos_maryDataSet1 = new Projeto_IDB_AUX.db_frescos_maryDataSet();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +42,13 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contactar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_novo_forn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.db_frescos_maryDataSet1 = new Projeto_IDB_AUX.db_frescos_maryDataSet();
+            this.btn_ped_req = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -127,6 +127,77 @@
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "fornecedor_cod";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "forn_nome";
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "forn_bairro";
+            this.Column3.HeaderText = "Bairro";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Avenida
+            // 
+            this.Avenida.DataPropertyName = "forn_avenida";
+            this.Avenida.HeaderText = "Avenida";
+            this.Avenida.Name = "Avenida";
+            this.Avenida.Width = 150;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "forn_telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "forn_email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.Width = 250;
+            // 
+            // Contactar
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.Contactar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Contactar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Contactar.HeaderText = "";
+            this.Contactar.Name = "Contactar";
+            this.Contactar.Text = "Contactar";
+            this.Contactar.UseColumnTextForButtonValue = true;
+            // 
+            // Editar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Editar.HeaderText = "";
+            this.Editar.Name = "Editar";
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForButtonValue = true;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.txt_search);
@@ -172,99 +243,28 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btn_ped_req);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 343);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(970, 48);
             this.panel3.TabIndex = 7;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(857, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ver Carrinho";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // db_frescos_maryDataSet1
             // 
             this.db_frescos_maryDataSet1.DataSetName = "db_frescos_maryDataSet";
             this.db_frescos_maryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Column1
+            // btn_ped_req
             // 
-            this.Column1.DataPropertyName = "fornecedor_cod";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "forn_nome";
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "forn_bairro";
-            this.Column3.HeaderText = "Bairro";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Avenida
-            // 
-            this.Avenida.DataPropertyName = "forn_avenida";
-            this.Avenida.HeaderText = "Avenida";
-            this.Avenida.Name = "Avenida";
-            this.Avenida.Width = 150;
-            // 
-            // Telefone
-            // 
-            this.Telefone.DataPropertyName = "forn_telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "forn_email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.Width = 250;
-            // 
-            // Contactar
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Contactar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Contactar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Contactar.HeaderText = "";
-            this.Contactar.Name = "Contactar";
-            this.Contactar.Text = "Contactar";
-            this.Contactar.UseColumnTextForButtonValue = true;
-            // 
-            // Editar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Editar.HeaderText = "";
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForButtonValue = true;
+            this.btn_ped_req.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_ped_req.Location = new System.Drawing.Point(757, 0);
+            this.btn_ped_req.Name = "btn_ped_req";
+            this.btn_ped_req.Size = new System.Drawing.Size(213, 48);
+            this.btn_ped_req.TabIndex = 18;
+            this.btn_ped_req.Text = "Ver Fornecimentos";
+            this.btn_ped_req.UseVisualStyleBackColor = true;
+            this.btn_ped_req.Click += new System.EventHandler(this.btn_ped_req_Click);
             // 
             // Fornecedores
             // 
@@ -303,7 +303,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_novo_forn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
         private db_frescos_maryDataSet db_frescos_maryDataSet1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -313,5 +312,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewButtonColumn Contactar;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.Button btn_ped_req;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_registrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_telef = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_registrar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,19 +59,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(680, 54);
             this.panel3.TabIndex = 7;
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_registrar.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar.Location = new System.Drawing.Point(430, 0);
-            this.btn_registrar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(125, 54);
-            this.btn_registrar.TabIndex = 6;
-            this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
-            this.btn_registrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -254,6 +241,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mercearia os Compadres";
             // 
+            // btn_registrar
+            // 
+            this.btn_registrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_registrar.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar.Location = new System.Drawing.Point(430, 0);
+            this.btn_registrar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Size = new System.Drawing.Size(125, 54);
+            this.btn_registrar.TabIndex = 6;
+            this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.button2_Click);
+            // 
             // tela_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -277,7 +277,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_senha;
@@ -292,5 +291,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_telef;
         private System.Windows.Forms.Label lbl_telef;
+        private System.Windows.Forms.Button btn_registrar;
     }
 }

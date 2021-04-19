@@ -142,6 +142,84 @@ namespace Mercearia_PCSHARP_MZ
             }
             con.Close();
         }
+        public static void AddRequisicao(requisicao_model req)
+        {
+            string data = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
+            string sql = "INSERT INTO requisicao VALUES (NULL,@cod_gerente,@cod_produto,@dia)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@cod_gerente", MySqlDbType.VarChar).Value = req.Cod_gerente;
+            cmd.Parameters.Add("@cod_produto", MySqlDbType.VarChar).Value = req.Cod_produto;
+            cmd.Parameters.Add("@dia", MySqlDbType.VarChar).Value = data;
+
+            //cmd.Parameters.Add("@Email", MySqlDbType.Double).Value = gerente.Email;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Requisito Adicionado");
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Requisito nao inserido" + ex.Message);
+            }
+            con.Close();
+        }
+        public static void AddPedido(pedido_model ped)
+        {
+            string data = DateTime.Today.Year.ToString()+"/"+ DateTime.Today.Month.ToString()+"/"+ DateTime.Today.Day.ToString();
+
+            string sql = "INSERT INTO pedido VALUES (NULL,@cod_cliente,@cod_gerente,@quantidade,@dia,@data)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@cod_cliente", MySqlDbType.VarChar).Value = ped.Cod_cliente;
+
+            cmd.Parameters.Add("@cod_gerente", MySqlDbType.VarChar).Value = ped.Cod_gerente;
+            cmd.Parameters.Add("@quantidade", MySqlDbType.VarChar).Value = ped.Quantidade;
+            cmd.Parameters.Add("@dia", MySqlDbType.VarChar).Value = data;
+            cmd.Parameters.Add("@data", MySqlDbType.VarChar).Value = ped.Data_entrega;
+
+            //cmd.Parameters.Add("@Email", MySqlDbType.Double).Value = gerente.Email;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pedido Adicionado");
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Pedido nao inserido" + ex.Message);
+            }
+            con.Close();
+        }
+        public static void AddFornecimento(Fornecimento_Model fornecimento)
+        {
+            string data = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
+
+            string sql = "INSERT INTO fornecimento VALUES (@cod_forn,@cod_prod,@quantidade)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@cod_prod", MySqlDbType.VarChar).Value =fornecimento.Cod_prod;
+
+            cmd.Parameters.Add("@cod_forn", MySqlDbType.VarChar).Value = fornecimento.Cod_forn;
+            cmd.Parameters.Add("@quantidade", MySqlDbType.VarChar).Value = fornecimento.Quantidade;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Fornecimento Adicionado");
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Fornecimento nao inserido" + ex.Message);
+            }
+            con.Close();
+        }
         public static void ActualizarProduto(Produto_Model prd,string id)
         {
             string sql = "UPDATE produto SET prod_nome = @Nome, prod_preco_unitario= @Preco WHERE produto_cod = @Id ";

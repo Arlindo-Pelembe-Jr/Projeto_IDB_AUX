@@ -56,6 +56,8 @@ namespace Projeto_IDB_AUX
             if (e.ColumnIndex == 0)
             {
                 //Adicionar
+                Requisicao requisicao = new Requisicao(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                requisicao.ShowDialog();
                 return;
             }
             if (e.ColumnIndex == 1)
@@ -78,6 +80,17 @@ namespace Projeto_IDB_AUX
             
                 return;
             }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
+
+        private void btn_ped_req_Click(object sender, EventArgs e)
+        {
+            Pedido_e_Requisicao pedido_E_Requisicao = new Pedido_e_Requisicao();
+            pedido_E_Requisicao.ShowDialog();
+        }
+    }
     }
 

@@ -33,16 +33,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btn_gravar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_preco_prod = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nome_prod = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.db_frescos_maryDataSet = new Projeto_IDB_AUX.db_frescos_maryDataSet();
             this.dbfrescosmaryDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -103,6 +103,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(727, 491);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(205, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Categoria";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "FRUTAS",
+            "LEGUMES",
+            "VERDURAS"});
+            this.comboBox1.Location = new System.Drawing.Point(208, 220);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(254, 26);
+            this.comboBox1.TabIndex = 10;
             // 
             // txt_preco_prod
             // 
@@ -175,21 +201,9 @@
             this.label1.Location = new System.Drawing.Point(205, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 18);
+            this.label1.Size = new System.Drawing.Size(139, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mercearia os Compadres";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "FRUTAS",
-            "LEGUMES",
-            "VERDURAS"});
-            this.comboBox1.Location = new System.Drawing.Point(208, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(254, 26);
-            this.comboBox1.TabIndex = 10;
+            this.label1.Text = "Frescos Da Mary";
             // 
             // db_frescos_maryDataSet
             // 
@@ -200,19 +214,6 @@
             // 
             this.dbfrescosmaryDataSetBindingSource.DataSource = this.db_frescos_maryDataSet;
             this.dbfrescosmaryDataSetBindingSource.Position = 0;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 199);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Categoria";
             // 
             // Produto_Labels
             // 

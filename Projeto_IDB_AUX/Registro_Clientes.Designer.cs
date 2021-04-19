@@ -248,9 +248,9 @@
             this.label1.Location = new System.Drawing.Point(307, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 17);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mercearia os Compadres";
+            this.label1.Text = "Frescos da Mary";
             // 
             // Registro_Clientes
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro_Clientes";
             this.Text = "Registro Cliente";
             this.Load += new System.EventHandler(this.Registro_Clientes_Load);
