@@ -248,9 +248,9 @@
             this.label1.Location = new System.Drawing.Point(307, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 17);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mercearia os Compadres";
+            this.label1.Text = "Frescos da Mary";
             // 
             // Registro_Fornecedor
             // 

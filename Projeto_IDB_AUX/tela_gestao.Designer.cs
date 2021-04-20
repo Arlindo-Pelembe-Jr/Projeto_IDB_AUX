@@ -33,18 +33,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_novo_prod = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Deletar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_novo_prod = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -104,76 +104,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txt_search);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.btn_novo_prod);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(707, 38);
-            this.panel4.TabIndex = 8;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // txt_search
-            // 
-            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_search.Location = new System.Drawing.Point(535, 9);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(122, 26);
-            this.txt_search.TabIndex = 7;
-            this.txt_search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(667, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btn_novo_prod
-            // 
-            this.btn_novo_prod.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_novo_prod.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_novo_prod.Location = new System.Drawing.Point(0, 0);
-            this.btn_novo_prod.Name = "btn_novo_prod";
-            this.btn_novo_prod.Size = new System.Drawing.Size(108, 38);
-            this.btn_novo_prod.TabIndex = 6;
-            this.btn_novo_prod.Text = "Novo Produto";
-            this.btn_novo_prod.UseVisualStyleBackColor = true;
-            this.btn_novo_prod.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 62);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Frescos da Mary";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "produto_cod";
@@ -226,6 +156,78 @@
             this.Deletar.Name = "Deletar";
             this.Deletar.Text = "Deletar";
             this.Deletar.UseColumnTextForButtonValue = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txt_search);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.btn_novo_prod);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(707, 38);
+            this.panel4.TabIndex = 8;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // txt_search
+            // 
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search.Location = new System.Drawing.Point(535, 9);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(122, 26);
+            this.txt_search.TabIndex = 7;
+            this.txt_search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::Projeto_IDB_AUX.Properties.Resources.transferir__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(667, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_novo_prod
+            // 
+            this.btn_novo_prod.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_novo_prod.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_novo_prod.Location = new System.Drawing.Point(0, 0);
+            this.btn_novo_prod.Name = "btn_novo_prod";
+            this.btn_novo_prod.Size = new System.Drawing.Size(108, 38);
+            this.btn_novo_prod.TabIndex = 6;
+            this.btn_novo_prod.Text = "Novo Produto";
+            this.btn_novo_prod.UseVisualStyleBackColor = true;
+            this.btn_novo_prod.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 62);
+            this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(172, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Frescos da Mary";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tela_gestao
             // 

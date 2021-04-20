@@ -28,31 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_gerente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ped_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ped_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ped_dia_de_entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deletar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.nr_requisicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_gere = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_requisicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deletar1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,6 +96,43 @@
             this.panel2.Size = new System.Drawing.Size(1200, 440);
             this.panel2.TabIndex = 8;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dataGridView2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(595, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(605, 440);
+            this.panel4.TabIndex = 1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nr_requisicao,
+            this.cod_gere,
+            this.cod_produto,
+            this.data_requisicao,
+            this.Deletar1});
+            this.dataGridView2.Location = new System.Drawing.Point(3, 81);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(602, 241);
+            this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Requisicao";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
@@ -114,12 +155,14 @@
             this.cod_gerente,
             this.ped_quantidade,
             this.ped_data,
-            this.ped_dia_de_entrega});
+            this.ped_dia_de_entrega,
+            this.Deletar});
             this.dataGridView1.Location = new System.Drawing.Point(0, 81);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(586, 241);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label2
             // 
@@ -129,41 +172,6 @@
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Pedidos";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dataGridView2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(595, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(605, 440);
-            this.panel4.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nr_requisicao,
-            this.cod_gere,
-            this.cod_produto,
-            this.data_requisicao});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 81);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(602, 241);
-            this.dataGridView2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Requisicao";
             // 
             // Codigo
             // 
@@ -207,6 +215,21 @@
             this.ped_dia_de_entrega.Name = "ped_dia_de_entrega";
             this.ped_dia_de_entrega.ReadOnly = true;
             // 
+            // Deletar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Deletar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Deletar.HeaderText = "";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.ReadOnly = true;
+            this.Deletar.Text = "Deletar";
+            this.Deletar.UseColumnTextForButtonValue = true;
+            // 
             // nr_requisicao
             // 
             this.nr_requisicao.DataPropertyName = "nr_requisicao";
@@ -235,6 +258,21 @@
             this.data_requisicao.Name = "data_requisicao";
             this.data_requisicao.ReadOnly = true;
             // 
+            // Deletar1
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Deletar1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Deletar1.HeaderText = "";
+            this.Deletar1.Name = "Deletar1";
+            this.Deletar1.ReadOnly = true;
+            this.Deletar1.Text = "Deletar";
+            this.Deletar1.UseColumnTextForButtonValue = true;
+            // 
             // Pedido_e_Requisicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -243,7 +281,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pedido_e_Requisicao";
             this.Text = "Pedido_e_Requisicao";
             this.Load += new System.EventHandler(this.Pedido_e_Requisicao_Load);
@@ -251,12 +289,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,11 +314,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cod_gere;
         private System.Windows.Forms.DataGridViewTextBoxColumn cod_produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_requisicao;
+        private System.Windows.Forms.DataGridViewButtonColumn Deletar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cod_cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn cod_gerente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ped_quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn ped_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn ped_dia_de_entrega;
+        private System.Windows.Forms.DataGridViewButtonColumn Deletar;
     }
 }

@@ -39,5 +39,41 @@ namespace Projeto_IDB_AUX
         {
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+              //  MessageBox.Show("Dado" + dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+
+                //Deletar
+                if (MessageBox.Show("Deseja Deletar esse Pedido?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    //int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    //MessageBox.Show("Dado"+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    SGBD_Produto.DeletarPedido(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    Display();
+                }
+                return;
+            }
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                //  MessageBox.Show("Dado" + dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+
+                //Deletar
+                if (MessageBox.Show("Deseja Deletar esse Requisicao?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    //int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    //MessageBox.Show("Dado"+ dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    SGBD_Produto.DeletarRequisicao(dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    Display();
+                }
+                return;
+            }
+        }
     }
 }

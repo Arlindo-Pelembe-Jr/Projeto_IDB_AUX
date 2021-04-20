@@ -67,7 +67,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 113);
             this.panel2.Margin = new System.Windows.Forms.Padding(8, 5, 8, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(973, 693);
+            this.panel2.Size = new System.Drawing.Size(973, 636);
             this.panel2.TabIndex = 7;
             // 
             // txt_telef
@@ -147,7 +147,7 @@
             this.panel3.Controls.Add(this.btn_limpar);
             this.panel3.Controls.Add(this.btn_registrar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 623);
+            this.panel3.Location = new System.Drawing.Point(0, 566);
             this.panel3.Margin = new System.Windows.Forms.Padding(8, 5, 8, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(973, 70);
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 806);
+            this.ClientSize = new System.Drawing.Size(973, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

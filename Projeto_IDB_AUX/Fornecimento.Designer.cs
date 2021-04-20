@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,25 +54,28 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.txt_search);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 139);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 621);
+            this.panel2.Size = new System.Drawing.Size(1059, 610);
             this.panel2.TabIndex = 7;
             // 
             // panel4
@@ -91,9 +94,9 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(552, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(507, 545);
+            this.panel4.Size = new System.Drawing.Size(507, 534);
             this.panel4.TabIndex = 17;
             // 
             // label6
@@ -115,7 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_id_forn.Location = new System.Drawing.Point(70, 51);
-            this.txt_id_forn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_id_forn.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id_forn.Name = "txt_id_forn";
             this.txt_id_forn.Size = new System.Drawing.Size(257, 25);
             this.txt_id_forn.TabIndex = 20;
@@ -126,7 +129,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nome_forn.Location = new System.Drawing.Point(70, 136);
-            this.txt_nome_forn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nome_forn.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nome_forn.Name = "txt_nome_forn";
             this.txt_nome_forn.Size = new System.Drawing.Size(257, 25);
             this.txt_nome_forn.TabIndex = 22;
@@ -163,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_prod_id.Location = new System.Drawing.Point(70, 220);
-            this.txt_prod_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_prod_id.Margin = new System.Windows.Forms.Padding(4);
             this.txt_prod_id.Name = "txt_prod_id";
             this.txt_prod_id.Size = new System.Drawing.Size(257, 25);
             this.txt_prod_id.TabIndex = 16;
@@ -174,7 +177,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_prod_nome.Location = new System.Drawing.Point(70, 305);
-            this.txt_prod_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_prod_nome.Margin = new System.Windows.Forms.Padding(4);
             this.txt_prod_nome.Name = "txt_prod_nome";
             this.txt_prod_nome.Size = new System.Drawing.Size(257, 25);
             this.txt_prod_nome.TabIndex = 18;
@@ -211,7 +214,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_qtd.Location = new System.Drawing.Point(70, 395);
-            this.txt_qtd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_qtd.Margin = new System.Windows.Forms.Padding(4);
             this.txt_qtd.Name = "txt_qtd";
             this.txt_qtd.Size = new System.Drawing.Size(257, 25);
             this.txt_qtd.TabIndex = 12;
@@ -222,7 +225,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_data_entrega.Location = new System.Drawing.Point(70, 480);
-            this.txt_data_entrega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_data_entrega.Margin = new System.Windows.Forms.Padding(4);
             this.txt_data_entrega.Name = "txt_data_entrega";
             this.txt_data_entrega.Size = new System.Drawing.Size(257, 25);
             this.txt_data_entrega.TabIndex = 14;
@@ -244,8 +247,8 @@
             // 
             this.panel3.Controls.Add(this.btn_reg);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 545);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 534);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1059, 76);
             this.panel3.TabIndex = 16;
@@ -254,7 +257,7 @@
             // 
             this.btn_reg.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_reg.Location = new System.Drawing.Point(875, 0);
-            this.btn_reg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_reg.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reg.Name = "btn_reg";
             this.btn_reg.Size = new System.Drawing.Size(184, 76);
             this.btn_reg.TabIndex = 15;
@@ -281,13 +284,13 @@
             this.Categoria,
             this.Adcionar});
             this.dataGridView2.Location = new System.Drawing.Point(0, 136);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView2.ShowEditingIcon = false;
-            this.dataGridView2.Size = new System.Drawing.Size(533, 280);
+            this.dataGridView2.Size = new System.Drawing.Size(533, 269);
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -317,13 +320,13 @@
             // 
             // Adcionar
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Adcionar.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Adcionar.DefaultCellStyle = dataGridViewCellStyle1;
             this.Adcionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Adcionar.HeaderText = "";
             this.Adcionar.Name = "Adcionar";
@@ -332,8 +335,11 @@
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(280, 86);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search.Location = new System.Drawing.Point(222, 102);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(253, 25);
             this.txt_search.TabIndex = 0;
@@ -364,15 +370,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Frescos da Mary";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Projeto_IDB_AUX.Properties.Resources.transferir__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(482, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Fornecimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 760);
+            this.ClientSize = new System.Drawing.Size(1059, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Fornecimento";
             this.Text = "Fornecimento";
             this.Load += new System.EventHandler(this.Fornecimento_Load);
@@ -385,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +436,6 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

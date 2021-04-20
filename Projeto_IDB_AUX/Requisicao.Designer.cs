@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_id_cli = new System.Windows.Forms.TextBox();
+            this.txt_nome_cli = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_prod_id = new System.Windows.Forms.TextBox();
             this.txt_prod_nome = new System.Windows.Forms.TextBox();
@@ -44,21 +48,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_reg = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_id_cli = new System.Windows.Forms.TextBox();
-            this.txt_nome_cli = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adcionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,6 +91,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridView2);
@@ -98,6 +101,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(885, 482);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -118,6 +122,50 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(345, 424);
             this.panel4.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(44, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Cliente Id";
+            // 
+            // txt_id_cli
+            // 
+            this.txt_id_cli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_id_cli.Location = new System.Drawing.Point(47, 39);
+            this.txt_id_cli.Name = "txt_id_cli";
+            this.txt_id_cli.Size = new System.Drawing.Size(180, 25);
+            this.txt_id_cli.TabIndex = 20;
+            // 
+            // txt_nome_cli
+            // 
+            this.txt_nome_cli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_nome_cli.Location = new System.Drawing.Point(47, 104);
+            this.txt_nome_cli.Name = "txt_nome_cli";
+            this.txt_nome_cli.Size = new System.Drawing.Size(180, 25);
+            this.txt_nome_cli.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(44, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 17);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Cliente Nome";
             // 
             // label4
             // 
@@ -260,58 +308,6 @@
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // txt_search
-            // 
-            this.txt_search.Location = new System.Drawing.Point(364, 37);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(170, 25);
-            this.txt_search.TabIndex = 0;
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 17);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Cliente Id";
-            // 
-            // txt_id_cli
-            // 
-            this.txt_id_cli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_id_cli.Location = new System.Drawing.Point(47, 39);
-            this.txt_id_cli.Name = "txt_id_cli";
-            this.txt_id_cli.Size = new System.Drawing.Size(180, 25);
-            this.txt_id_cli.TabIndex = 20;
-            // 
-            // txt_nome_cli
-            // 
-            this.txt_nome_cli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_nome_cli.Location = new System.Drawing.Point(47, 104);
-            this.txt_nome_cli.Name = "txt_nome_cli";
-            this.txt_nome_cli.Size = new System.Drawing.Size(180, 25);
-            this.txt_nome_cli.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 17);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Cliente Nome";
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "produto_cod";
@@ -338,18 +334,42 @@
             // 
             // Adcionar
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.Adcionar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Adcionar.DefaultCellStyle = dataGridViewCellStyle1;
             this.Adcionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Adcionar.HeaderText = "";
             this.Adcionar.Name = "Adcionar";
             this.Adcionar.Text = "Adicionar";
             this.Adcionar.UseColumnTextForButtonValue = true;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search.Location = new System.Drawing.Point(307, 37);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(170, 25);
+            this.txt_search.TabIndex = 0;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Projeto_IDB_AUX.Properties.Resources.transferir__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(483, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // Requisicao
             // 
@@ -372,6 +392,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewButtonColumn Adcionar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

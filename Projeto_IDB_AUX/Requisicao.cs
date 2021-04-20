@@ -124,6 +124,11 @@ namespace Projeto_IDB_AUX
             Pedido_e_Requisicao pedido_E_Requisicao = new Pedido_e_Requisicao();
             pedido_E_Requisicao.ShowDialog();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

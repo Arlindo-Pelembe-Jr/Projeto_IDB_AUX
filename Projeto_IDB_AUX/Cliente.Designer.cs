@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +45,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_novo_cliente = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_ped_req = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_ped_req = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -145,13 +145,13 @@
             // 
             // Pedido
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.Pedido.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Pedido.DefaultCellStyle = dataGridViewCellStyle1;
             this.Pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pedido.HeaderText = "";
             this.Pedido.Name = "Pedido";
@@ -160,13 +160,13 @@
             // 
             // Editar
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
             this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Editar.HeaderText = "";
             this.Editar.Name = "Editar";
@@ -200,10 +200,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::Projeto_IDB_AUX.Properties.Resources.transferir__1_;
             this.pictureBox1.Location = new System.Drawing.Point(1140, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -230,6 +232,17 @@
             this.panel3.Size = new System.Drawing.Size(1200, 63);
             this.panel3.TabIndex = 7;
             // 
+            // btn_ped_req
+            // 
+            this.btn_ped_req.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_ped_req.Location = new System.Drawing.Point(987, 0);
+            this.btn_ped_req.Name = "btn_ped_req";
+            this.btn_ped_req.Size = new System.Drawing.Size(213, 63);
+            this.btn_ped_req.TabIndex = 17;
+            this.btn_ped_req.Text = "Ver Pedidos e Requisicao";
+            this.btn_ped_req.UseVisualStyleBackColor = true;
+            this.btn_ped_req.Click += new System.EventHandler(this.btn_ped_req_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
@@ -254,17 +267,6 @@
             this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Frescos da Mary";
-            // 
-            // btn_ped_req
-            // 
-            this.btn_ped_req.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_ped_req.Location = new System.Drawing.Point(987, 0);
-            this.btn_ped_req.Name = "btn_ped_req";
-            this.btn_ped_req.Size = new System.Drawing.Size(213, 63);
-            this.btn_ped_req.TabIndex = 17;
-            this.btn_ped_req.Text = "Ver Pedidos e Requisicao";
-            this.btn_ped_req.UseVisualStyleBackColor = true;
-            this.btn_ped_req.Click += new System.EventHandler(this.btn_ped_req_Click);
             // 
             // Cliente
             // 

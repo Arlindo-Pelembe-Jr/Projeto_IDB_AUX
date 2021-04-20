@@ -334,6 +334,46 @@ namespace Mercearia_PCSHARP_MZ
             }
             con.Close();
         }
+        public static void DeletarRequisicao(string id)
+        {
+            string sql = "DELETE FROM requisicao WHERE nr_requisicao= @Id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Requisicao Deletada");
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Requisicao nao deletada" + ex.Message);
+            }
+            con.Close();
+        }
+        public static void DeletarPedido(string id)
+        {
+            string sql = "DELETE FROM pedido WHERE pedido_cod= @Id";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pedido Deletado");
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Pedido nao deletado" + ex.Message);
+            }
+            con.Close();
+        }
         public static void mostrarEProcurar(string query, DataGridView dvg)
         {
             string sql = query;
